@@ -50,8 +50,8 @@ function Login() {
 
   return (
     <div className='container px-0'>
-      <div class='loginBackground'>
-        <img src='./levantaPesa.jpg' alt='' />
+      <div className='loginBackground'>
+        <img src='./background.jpg' alt='' />
       </div>
 
       <div className='row rowContainer'>

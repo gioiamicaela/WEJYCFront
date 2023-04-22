@@ -3,7 +3,7 @@
 } */
 
 .loginBackground {
-  /* background-image: url('./imgLogin.png') !important; */
+  /* background-image: url('./../../public/background.jpg') !important; */
   background-position: center center;
   margin: 0;
   width: auto;
@@ -31,8 +31,7 @@
 }
 
 .titleLogin {
-  /* font-family: 'Integral CF'; */
-  font-family: 'Candal', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
