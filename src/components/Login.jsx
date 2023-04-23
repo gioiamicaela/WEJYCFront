@@ -11,12 +11,7 @@ function Login() {
   const [errorMessage, setErrorMessage] = React.useState('');
   const [successMessage, setSuccessMessage] = React.useState('');
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const token = useSelector((state) => {
-    return state.token;
-  });
 
   const handleLogin = async (e, email, password) => {
     e.preventDefault();
@@ -33,7 +28,7 @@ function Login() {
         loginUser({
           email,
           token: response.data.token,
-          buyerId: response.data.buyerId,
+          userId: response.data.userId,
         })
       );
 
@@ -41,7 +36,7 @@ function Login() {
       setErrorMessage('');
       setPassword('');
       setEmail('');
-      navigate('/book');
+      navigate('/');
     } catch (err) {
       setErrorMessage(err.response.data);
       setSuccessMessage('');
