@@ -49,12 +49,12 @@ function Login() {
   };
 
   return (
-    <div className='container px-0'>
-      <div className='loginBackground'>
+    <div className='container vh-100 px-0'>
+      <div className='loginBackground h-50'>
         <img src='./background.jpg' alt='' />
       </div>
 
-      <div className='row rowContainer'>
+      <div className='row rowContainer pt-5'>
         <div className='col-12'>
           <h1 className='titleLogin'>¡HOLA DE NUEVO!</h1>
           <h3 className='subtitleLogin'>Entra a tu cuenta</h3>

@@ -9,18 +9,11 @@
     rgba(38, 38, 47, 0.8) 100%
   );
   clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%, 0 100%, 0% 50%);
-  position: relative;
-  top: -115px;
-}
-
-.rowContainer {
-  position: relative;
-  top: -80px;
 }
 
 .loginBackground img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .titleLogin {

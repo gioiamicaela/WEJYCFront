@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
       <NavBar />
-      <Swiper list={photoList}></Swiper>
+      <Swiper list={photoList} />
     </div>
   );
 }

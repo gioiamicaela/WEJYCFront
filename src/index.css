@@ -5,6 +5,11 @@
   text-decoration: none;
 }
 
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
 body,
 html {
   background-color: #212121;
@@ -13,4 +18,15 @@ html {
 
 a {
   text-decoration: none !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}
+
+span.navbar-toggler-icon {
+  color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.1);
+  filter: invert(100%);
 }

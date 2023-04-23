@@ -13,6 +13,7 @@ function SwiperComponent({ list }) {
       {list.length > 0 && (
         <div className='container'>
           <Swiper
+            style={{ marginTop: '100px' }}
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
