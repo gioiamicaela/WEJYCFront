@@ -1,9 +1,4 @@
-/* .loginBackground {
-  background-color: #ff5851 !important;
-} */
-
 .loginBackground {
-  /* background-image: url('./../../public/background.jpg') !important; */
   background-position: center center;
   margin: 0;
   width: auto;
@@ -13,9 +8,7 @@
     rgba(102, 124, 98, 0) 0%,
     rgba(38, 38, 47, 0.8) 100%
   );
-  /* transform: rotate(1.72deg); */
   clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%, 0 100%, 0% 50%);
-  /* clip-path: ellipse(517px 338px at top left); */
   position: relative;
   top: -115px;
 }
@@ -52,20 +45,19 @@
   text-align: center;
 }
 
-/* html {
-  background-color: #1c1c1e;
-}
-body {
-  position: relative;
-  top: 30px;
-} */
-
 .loginInput {
   width: 300px;
   height: 46px;
   border: 1px solid #8b8b8b;
   border-radius: 10px;
   background-color: #212121;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8b8b8b;
+  padding: 5px;
 }
 
 input,
@@ -79,36 +71,13 @@ input::placeholder {
   padding: 5px;
 }
 
-.checkBoxLogin {
-  width: 300px;
-  height: 46px;
-  margin: 0;
-  padding: 0;
+.loginInput-container {
+  position: relative;
+  display: inline-block;
 }
 
-.recuerdameText {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 11px;
-  line-height: 16px;
-  color: #949090;
-}
-
-.passwordLogin {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 11px;
-  line-height: 16px;
-}
-
-.recuerdameText:hover {
-  color: #9eff70;
-}
-
-.passwordLogin:hover {
-  color: #9eff70;
+.loginInput-container input {
+  padding-right: 40px;
 }
 
 .passwordIcon {
@@ -119,13 +88,24 @@ input::placeholder {
   background-color: rgba(31, 31, 31, 0.43);
 }
 
+.loginInput-container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(31, 31, 31, 0.43);
+  color: white;
+  border: none;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
 .btnLogin {
   border: 1px solid #9eff70;
   border-radius: 28px;
   width: 274px;
   height: 50px;
   color: #9eff70;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 556;
   font-size: 17px;
@@ -133,80 +113,7 @@ input::placeholder {
   text-align: center;
 }
 
-.login-form-footer {
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  column-gap: 1em;
-  margin-left: 20px;
-  margin-right: 20px;
+.btnLogin:hover {
+  color: white;
+  background-color: #9eff70;
 }
-
-.miembroLogin {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  color: #949090;
-}
-
-.uneteLogin {
-  color: #9eff70;
-}
-
-/* Ver de agregar className */
-/* @media only screen and (max-width: 480px) {
-  input[type='submit'] {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 162px 13px 141px;
-    gap: 10px;
-    background: #f7855b00;
-    border-radius: 50px;
-    line-height: 23px;
-    border: 2px solid #9eff70;
-  
-    color: rgba(158, 255, 112, 1);
-    font-size: 17px;
-    font-family: 'Manrope', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-  }
-  input[type='text'],
-  input[type='password'],
-  input[type='email'] {
-    border: none;
-    background: #0000006d;
-    height: 58px;
-    padding: 2 1.5rem;
-    padding-left: calc(1rem * 1.1);
-    width: 100%;
-    outline: none;
-    font-size: 40px;
-    border-radius: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    justify-content: center;
-  }
-  .btnLogin {
-    border: 1px solid #9eff70;
-    width: 274px;
-    height: 50px;
-    color: #9eff70;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 16px;
-  }
-  .socialLogin {
-    width: 58px;
-    height: 56px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-      drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
- 
-  
-} */

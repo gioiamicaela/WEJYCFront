@@ -12,7 +12,12 @@ function Login() {
   const [successMessage, setSuccessMessage] = React.useState('');
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [shown, setShown] = useState(false);
 
+  const switchShown = (e) => {
+    e.preventDefault();
+    setShown(!shown);
+  };
   const handleLogin = async (e, email, password) => {
     e.preventDefault();
     try {
@@ -62,7 +67,7 @@ function Login() {
             <div className='form-group pt-2'>
               <input
                 type='email'
-                className='form-control loginInput'
+                className='form-control loginInput mb-2'
                 id='exampleInputEmail1'
                 aria-describedby='emailHelp'
                 placeholder='Escribe tu email o número de teléfono'
@@ -72,74 +77,40 @@ function Login() {
                 }}
               />
             </div>
-            <div className='form-group passwordGroup'>
+            <div className='form-group passwordGroup loginInput-container'>
               <input
-                type='password'
+                type={shown ? 'text' : 'password'}
                 className='form-control loginInput'
                 id='exampleInputPassword1'
                 placeholder='Escribe tu contraseña'
-                style={{ marginTop: '10px' }}
                 value={password}
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
               />
-            </div>
-            <div className='row checkBoxLogin pt-1 d-flex flex-column align-items-end'>
-              <div
-                className='px-0'
-                style={{
-                  width: '99px',
-                  height: '22px',
+              <button
+                className='passwordIcon'
+                onClick={(e) => {
+                  switchShown(e);
                 }}
               >
-                <div className='form-check d-flex align-items-center mx-0 px-0'>
-                  {/* <img src={recuerdame} alt='' /> */}
-                  <label
-                    className='form-check-label recuerdameText'
-                    htmlFor='exampleCheck1'
-                    style={{ paddingLeft: '5px' }}
-                  >
-                    Recuérdame
-                  </label>
-                </div>
-              </div>
-              <div className=' px-0'>
-                <div className='form-check d-flex align-items-center'>
-                  <label
-                    className='form-check-label passwordLogin m-1'
-                    htmlFor='exampleCheck1'
-                  >
-                    ¿Olvidaste la contraseña?
-                  </label>
-                </div>
-              </div>
+                {shown ? (
+                  <i
+                    class='fa-solid fa-eye-slash'
+                    style={{ color: '#f2f2f2' }}
+                  ></i>
+                ) : (
+                  <i
+                    class='fa-sharp fa-solid fa-eye'
+                    style={{ color: '#f2f2f2' }}
+                  ></i>
+                )}
+              </button>
             </div>
 
-            <button type='submit' className='btn btnLogin'>
+            <button type='submit' className='btn btnLogin mt-5'>
               Ingresa
             </button>
-
-            <div className='login-form-footer pt-3'>
-              <div className='footer-right'>
-                <Link href='#' style={{ marginRight: '57px' }}>
-                  {/* <img src={google} alt='google' className='socialLogin' /> */}
-                </Link>
-
-                <Link href='#'>
-                  {/* <img src={facebook} alt='facebook' className='socialLogin' /> */}
-                </Link>
-              </div>
-            </div>
-
-            <div className='row' style={{ paddingTop: '15px' }}>
-              <p className='miembroLogin'>
-                ¿No eres miembro aún?{' '}
-                <Link to='/register' className='miembroLogin uneteLogin'>
-                  Únete
-                </Link>{' '}
-              </p>
-            </div>
           </form>
         </div>
       </div>
