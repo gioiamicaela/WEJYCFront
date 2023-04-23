@@ -96,12 +96,12 @@ function Login() {
               >
                 {shown ? (
                   <i
-                    class='fa-solid fa-eye-slash'
+                    className='fa-solid fa-eye-slash'
                     style={{ color: '#f2f2f2' }}
                   ></i>
                 ) : (
                   <i
-                    class='fa-sharp fa-solid fa-eye'
+                    className='fa-sharp fa-solid fa-eye'
                     style={{ color: '#f2f2f2' }}
                   ></i>
                 )}
