@@ -17,7 +17,7 @@ function SwiperComponent({ list }) {
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={8}
+            slidesPerView={4}
             coverflowEffect={{
               rotate: 50,
               stretch: 0,
@@ -37,8 +37,6 @@ function SwiperComponent({ list }) {
                       src={photo.src}
                       alt={photo.title}
                       className={styles.photoImage}
-                      width={500}
-                      height={345}
                     />
                   </SwiperSlide>
                 </>

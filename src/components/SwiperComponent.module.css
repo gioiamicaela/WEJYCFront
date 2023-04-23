@@ -13,4 +13,19 @@
 .photoImage {
   border-radius: 10px;
   background-color: azure;
+  object-fit: fill;
+  object-position: center;
+  width: 500px;
+  height: 345px;
+}
+
+@media (max-width: 991px) {
+  .photoImage {
+    border-radius: 10px;
+    background-color: azure;
+    object-fit: fill;
+    object-position: center;
+    width: 450px;
+    height: 245px;
+  }
 }
